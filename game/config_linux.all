@@ -1,0 +1,46 @@
+root = "./"
+gamesrc = "../game"
+
+--编写的服务path
+serversPath = gamesrc.."?.lua;"..
+				gamesrc.."/services/?.lua;"..
+				root.."examples/?.lua;"..root.."test/?.lua;"..		
+
+luaservice = root.."service/?.lua;"..serversPath
+lualoader = root.."lualib/loader.lua"
+--读取的通用路径
+lua_path = root.."lualib/?.lua;"..
+			root.."lualib/compat10/?.lua;"..
+			root.."lualib/http/?.lua;"..
+			root.."lualib/skynet/?.lua;"..
+			root.."lualib/skynet/db/?.lua;"..
+			serversPath
+--将添加到 package.cpath 中的路径，供 require 调用。
+lua_cpath = root.."luaclib/?.so"
+cpath = root.."cservice/?.so"
+
+snax = serversPath
+thread = 1
+logger = nil
+logpath = "."
+harbor = 0
+start = "gameMain"
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+standalone = "0.0.0.0:2013"
+-- daemon = "./skynet.pid"
+
+--网关
+gateport = "8200"
+gatename = "AdventureGate"
+
+--http请求相关
+webport = "8201"
+
+--db相关
+redishost = "127.0.0.1"
+redisport = "6379"
+redisbase = 0
+
+mysqlhost = "127.0.0.1"
+mysqlport = ""
+
