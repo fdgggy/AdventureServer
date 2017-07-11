@@ -1,10 +1,11 @@
 root = "./"
-gamesrc = "../game"
+gamesrc = "../game/"
 
 --编写的服务path
 serversPath = gamesrc.."?.lua;"..
-				gamesrc.."/services/?.lua;"..
-				root.."examples/?.lua;"..root.."test/?.lua;"..		
+				gamesrc.."services/?.lua;"..
+				root.."examples/?.lua;"..root.."test/?.lua;"..
+				gamesrc.."preload/?.lua"	
 
 luaservice = root.."service/?.lua;"..serversPath
 lualoader = root.."lualib/loader.lua"
@@ -18,6 +19,8 @@ lua_path = root.."lualib/?.lua;"..
 --将添加到 package.cpath 中的路径，供 require 调用。
 lua_cpath = root.."luaclib/?.so"
 cpath = root.."cservice/?.so"
+preload = gamesrc.."preload/preload.lua"		--预加载
+
 
 snax = serversPath
 thread = 1
@@ -26,7 +29,7 @@ logpath = "."
 harbor = 0
 start = "gameMain"
 bootstrap = "snlua bootstrap"	-- The service for bootstrap
-standalone = "0.0.0.0:2013"
+--standalone = "0.0.0.0:2013"
 -- daemon = "./skynet.pid"
 
 --网关
