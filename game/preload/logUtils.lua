@@ -13,6 +13,6 @@ function logger.log(level, str, ...)
 	local time = os.date("%Y-%m-%d %H:%M:%S", os.time())  
 	local info = debug.getinfo(2)
 	local msg = string.format("[%s::][%s %s:%d]", level, time, info.short_src, info.currentline)
-	print(msg)
-	skynet.send("LOG", "lua", level, SERVICE_NAME, msg)
+	skynet.error(msg)
+	-- skynet.send("LOG", "lua", level, SERVICE_NAME, msg)
 end

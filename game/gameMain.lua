@@ -13,5 +13,7 @@ skynet.start(function ()
 	end
 	--debug_console
 	-- skynet.uniqueservice("redisService")
+	-- skynet.uniqueservice("db_service")
 
+	skynet.uniqueservice("testredis")
 end)

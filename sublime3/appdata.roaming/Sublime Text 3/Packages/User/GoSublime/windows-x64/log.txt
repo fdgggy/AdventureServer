@@ -1,0 +1,39 @@
+
+** 2017-03-29 09:59:51.793662 **:
+MarGo: MarGo build failed
+cmd: `['', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r17.03.05-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+
+`
+exception: `Cannot find command `go``
+--------------------------------
+
+** 2017-03-29 09:59:51.810674 **:
+MarGo: Missing required environment variables: GOROOT
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"F:\\SoftInstall\\Go\\pkg\\windows_amd64;F:\\Test\\Go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"F:/SoftInstall/Go", GOPATH:"F:/Test/Go", InstallSuffix:""}

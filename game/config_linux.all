@@ -6,6 +6,9 @@ serversPath = gamesrc.."?.lua;"..
 				gamesrc.."services/?.lua;"..
 				root.."examples/?.lua;"..root.."test/?.lua;"..
 				gamesrc.."preload/?.lua"	
+serversPath = gamesrc.."/?.lua;"..
+				gamesrc.."/services/?.lua;"..
+				root.."examples/?.lua;"..root.."test/?.lua;"		
 
 luaservice = root.."service/?.lua;"..serversPath
 lualoader = root.."lualib/loader.lua"
@@ -26,7 +29,9 @@ snax = serversPath
 thread = 1
 logger = nil
 logpath = "."
-harbor = 0
+harbor = 1
+address = "127.0.0.1:2526"
+master = "127.0.0.1:2013"
 start = "gameMain"
 bootstrap = "snlua bootstrap"	-- The service for bootstrap
 --standalone = "0.0.0.0:2013"

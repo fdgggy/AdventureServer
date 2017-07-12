@@ -1,0 +1,4 @@
+{
+	"shell_cmd": "F:\\SoftInstall\\Go\\bin\\go run $file",
+	"encoding": "utf-8"
+}

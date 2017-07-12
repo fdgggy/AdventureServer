@@ -1,0 +1,10 @@
+{
+	"auto_find_in_selection": true,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"default_line_ending": "unix",
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Vintage"
+	]
+}
