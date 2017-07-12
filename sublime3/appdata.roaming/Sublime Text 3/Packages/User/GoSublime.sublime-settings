@@ -1,7 +1,0 @@
-{
-    "env": {
-        "GOPATH": "F:/Test/Go",
-        "GOROOT": "F:/SoftInstall/Go"
-    },
-    "fmt_cmd": ["goimports"]
-}
