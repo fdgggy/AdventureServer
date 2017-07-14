@@ -1,5 +1,6 @@
 local skynet = require "skynet"
 local redis = require "skynet.db.redis"
+require "skynet.manager"
 
 local connect
 
@@ -12,14 +13,22 @@ skynet.start(function ()
 	connect = redis.connect(conf)
 
 	if not connect then
-		--error log
+		logger.log(skyLog.ERROR, "connect redis error!")
 	else
+		logger.log(skyLog.INFO, "connect redis success!")
+
 		skynet.dispatch("lua", function (seddion, source, cmd, ...)
-			if not connect then
-				--log
+			assert(connect, "redis is not connect!")
+
+			local f = connect[cmd]
+			local res = f(connect, ...)
+			if res then
+				skynet.retpack(res)
 			else
-				
+				logger.log(skyLog.ERROR, "excuse %s command failed!", cmd)
 			end
 		end)
+
+		skynet.register("redis_service")
 	end
 end)

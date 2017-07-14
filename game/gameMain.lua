@@ -1,19 +1,17 @@
 local skynet = require "skynet"
 
 skynet.start(function ()
-	skynet.error("Server start!!!")
-	--日志服务
-	-- skynet.uniqueservice("logserver")
-
-	print(type(logger))
-	logger.log(logger.INFO, "loger")
+	skynet.uniqueservice("logserver")
+	logger.log(skyLog.INFO, "Hello skynet!!!")
 
 	if not skynet.getenv("daemon") then
 		skynet.newservice("console")
 	end
 	--debug_console
-	-- skynet.uniqueservice("redisService")
-	-- skynet.uniqueservice("db_service")
+	skynet.uniqueservice("redisService")
 
-	skynet.uniqueservice("testredis")
+	local redis = require "Dao"
+	redis.set("AAA", "HelloKitty")
+	local r2 = redis.get("AAA")
+	logger.log(skyLog.INFO, "r2=%s", r2)
 end)
