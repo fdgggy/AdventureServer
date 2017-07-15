@@ -1,6 +1,5 @@
 local skynet = require "skynet"
 local unpack =table.unpack
-local pack = table.pack
 
 local Dao = {}
 
@@ -22,7 +21,7 @@ function Dao.hmset(k, t)
 		table.insert(data, v)
 	end
 
-	return skynet.call("redis_service", "lua", "HMSET", k, table.unpack(data))
+	return skynet.call("redis_service", "lua", "HMSET", k, unpack(data))
 end
 
 function Dao.hmget(k, f, ...)
