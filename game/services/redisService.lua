@@ -22,11 +22,11 @@ skynet.start(function ()
 
 			local f = connect[cmd]
 			local res = f(connect, ...)
-			if res then
-				skynet.retpack(res)
-			else
+			if not res then
 				logger.log(skyLog.ERROR, "excuse %s command failed!", cmd)
 			end
+			
+			skynet.retpack(res)
 		end)
 
 		skynet.register("redis_service")
