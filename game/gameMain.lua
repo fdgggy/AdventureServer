@@ -8,9 +8,15 @@ skynet.start(function ()
 		skynet.newservice("console")
 	end
 	--debug_console
+	skynet.uniqueservice("protoServer")
 	skynet.uniqueservice("redisService")
 
-
+	local watchdog = skynet.newservice("watchdog")
+	skynet.call(watchdog, "lua", "start", {
+		port = gateport,
+		maxclient = maxclients,
+		nodelay = true,
+	})
 
 	local redis = require "Dao"
 	redis.set("AAA", "HelloKitty")
