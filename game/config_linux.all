@@ -38,6 +38,7 @@ bootstrap = "snlua bootstrap"	-- The service for bootstrap
 --网关
 gateport = "8200"
 gatename = "AdventureGate"
+maxclients = "1000"
 
 --http请求相关
 webport = "8201"
