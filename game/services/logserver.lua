@@ -33,5 +33,5 @@ skynet.start(function ()
 		f(...)
 	end)
 
-	skynet.register("LOG")
+	skynet.register(globalCommon.serverType.Log)
 end)

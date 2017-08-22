@@ -29,6 +29,6 @@ skynet.start(function ()
 			skynet.retpack(res)
 		end)
 
-		skynet.register("redis_service")
+		skynet.register(globalCommon.serverType.Redis)
 	end
 end)

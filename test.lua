@@ -19,3 +19,9 @@ function a:hah(s)
 end
 
 a:hah("shahha")
+
+local str = string.pack(">s2", "1")
+print("str="..str)
+local str1 = string.unpack(">s2", str)
+print("str1="..str1)
+

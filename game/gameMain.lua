@@ -11,8 +11,8 @@ skynet.start(function ()
 	skynet.uniqueservice("protoServer")
 	skynet.uniqueservice("redisService")
 
-	local watchdog = skynet.newservice("watchdog")
-	skynet.call(watchdog, "lua", "start", {
+	local gateserver = skynet.newservice("gateserver")
+	skynet.call(gateserver, "lua", "open", {
 		port = gateport,
 		maxclient = maxclients,
 		nodelay = true,
