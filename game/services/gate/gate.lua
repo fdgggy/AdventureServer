@@ -1,6 +1,6 @@
 local skynet = require "skynet"
 local gateServer = require "gateserver"
-local msgHandler = require "msghandler"
+local msgHandler = require "gatemsghandler"
 
 local gate = {}
 

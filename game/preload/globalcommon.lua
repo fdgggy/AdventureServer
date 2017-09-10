@@ -14,4 +14,8 @@ globalCommon.cmdType = {
 	CloseGate = "CloseGate",
 }
 
+globalCommon.msgType = {
+	RegisterServer = "RegisterServer",
+	SendToclientByFd = "SendToclientByFd",
+}
 return globalCommon

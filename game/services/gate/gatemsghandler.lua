@@ -1,14 +1,19 @@
---消息处理器，结合网关用
+--网关消息处理器，结合网关用
 
 local netpack = require "netpack"
 local socketdriver = require "socketdriver"
 local serverMgr = require "servermanager"
+local srvmsgMgr = require "srvmsgmgr"
 
 
 local msghandler = {}
 local connection = {}
+-- local loginBalance = 1	--负载均衡
 
 --消息处理
+msghandler.srvmsgMgr = srvmsgMgr.New()
+msghandler.srvmsgMgr:listenRequest(globalCommon.msgType.RegisterServer, serverMgr.registerServer)
+msghandler.srvmsgMgr:listenRequest(globalCommon.msgType.SendToclientByFd, msghandler.sendtoClient)
 
 msghandler.gateProxy = nil			--网关代理
 
@@ -22,16 +27,16 @@ function msghandler.sendtoClient(fd, response)
 	end
 end
 
-function msghandler.addListen(cmdType, callBack)
-	serverMgr:listenRequest(cmdType, callBack)
-end
-msghandler.addListen(globalCommon.cmdType.SendtoClient, msghandler.sendtoClient)
+-- function msghandler.addListen(cmdType, callBack)
+-- 	serverMgr:listenRequest(cmdType, callBack)
+-- end
+-- msghandler.addListen(globalCommon.cmdType.SendtoClient, msghandler.sendtoClient)
 
-function msghandler.dispatch(cmdType, ...)
-	serverMgr:dispatchRequest(cmdType, ...)
-end
+-- function msghandler.dispatch(cmdType, ...)
+-- 	serverMgr:dispatchRequest(cmdType, ...)
+-- end
 
-local function kick(fd)
+local function kick(fd)		--踢人
 	-- body
 end
 
@@ -40,7 +45,11 @@ function msghandler.open(source, conf)	--监听打开时
 end
 
 function msghandler.connect(fd, msg)	--msg为addr，要验证, 有新连接时
-	-- body
+	connection[fd] = {
+		addr = msg,
+		fd = fd,
+		seq = 1,
+	}
 end
 
 function msghandler.disconnect(fd, msg)	--kick	
